@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+
+.spyproject/
+.virtual_documents/
+
+# notebooks content
+.ipynb_checkpoints/
+
+
+*.pyc
+*.egg-info/
+
+build/
+dist/
+results/
