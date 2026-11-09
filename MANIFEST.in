@@ -1,0 +1,9 @@
+include README.md pyproject.toml pytest.ini references.bib
+recursive-include docs *.md
+recursive-include examples *.py *.md
+recursive-include tests *.py
+include .github/workflows/tests.yml
+global-exclude *.pyc
+prune results
+prune build
+prune dist

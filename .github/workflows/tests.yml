@@ -1,0 +1,31 @@
+name: Numerical tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Install package and optional test backends
+        run: python -m pip install -e ".[test,fem,cvxpy,plot]"
+      - name: Verify FEM dependency
+        run: python -c "import ngsolve; print(ngsolve.__version__)"
+      - name: Run suite
+        run: python -m pytest tests -q
+      - name: Run a small complete reconstruction
+        run: python -m examples.disk_reconstruction

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eitlab"
+version = "0.3.0"
+description = "Modular electrical tomography with optional NGSolve and independent inverse solvers"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "bibtexparser>=1.4,<2"]
+
+[project.optional-dependencies]
+cvxpy = ["cvxpy>=1.6"]
+test = ["pytest>=8.2"]
+plot = ["matplotlib>=3.8"]
+plot-pv = ["pyvista>=0.44"]
+fem = ["ngsolve>=6.2.2608"]
+
+[tool.setuptools]
+packages = ["eitlab", "eit_forward", "eit_inverse", "examples"]
+
+[tool.setuptools.data-files]
+"share/eitlab" = ["references.bib"]
