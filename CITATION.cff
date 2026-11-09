@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use EITLab, please cite the software version used in your research."
+type: software
+title: "EITLab"
+authors:
+  - family-names: "Battistel"
+    given-names: "Alberto"
+version: "0.1.0"
+date-released: "2026-11-09"
+abstract: >-
+  Open-source Python framework for electrical impedance tomography (EIT)
+  simulation, reconstruction, and visualization.
+doi: "10.5281/zenodo.24084811"
+repository-code: "https://github.com/alberto-battistel/eitlab"

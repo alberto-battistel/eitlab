@@ -1,5 +1,7 @@
 # EITLab
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24084811.svg)](https://doi.org/10.5281/zenodo.24084811)
+
 Finite-element electrical impedance tomography with the complete electrode
 model, conductivity Jacobians, and independent inverse solvers.
 Reconstruction options include Tikhonov and total variation.
@@ -107,6 +109,20 @@ interactive notebook plots, and the figures provided by each demonstration.
 `eit_forward` owns FEM physics, `eit_inverse` consumes numerical matrices and
 data, and `eitlab` supplies convenience imports, parameters, discretization,
 differentiation, bibliography and optional plotting.
+
+## Citation
+
+If you use EITLab in your research, please cite the archived software version
+used for your study. For the initial release:
+
+> Battistel, A. (2026). *EITLab* (Version 0.1.0) [Computer software].
+> Zenodo. https://doi.org/10.5281/zenodo.24084811
+
+The DOI and badge above refer to the archived **v0.1.0** release. For
+reproducibility, cite the specific software version used in your study.
+See [CITATION.cff](CITATION.cff) for machine-readable citation metadata,
+and [GitHub releases](https://github.com/alberto-battistel/eitlab/releases)
+for available versions.
 
 ## Tests
 
